@@ -4,7 +4,7 @@
   "description": "A very basic starter for functional programming projects.",
   "main": "forEach.js",
   "scripts": {
-    "dev": "babel-node ./run.js"
+    "dev": "babel-node ./src/run.js"
   },
   "repository": {
     "type": "git",
