@@ -1,0 +1,23 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "description": "A very basic starter for functional programming projects.",
+  "main": "forEach.js",
+  "scripts": {
+    "dev": "babel-node ./run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuyaoxing/functional-programming.git"
+  },
+  "author": "wuyaoxing <82565097@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wuyaoxing/functional-programming/issues"
+  },
+  "homepage": "https://github.com/wuyaoxing/functional-programming#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
