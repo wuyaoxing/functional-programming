@@ -29,4 +29,13 @@ const map = (arr, fn) => {
   return result;
 };
 
-export { forEach, forEachObject, map };
+// filter
+const filter = (arr, fn) => {
+  const result = [];
+  for (const value of arr) {
+    fn(value) && result.push(value);
+  }
+  return result;
+};
+
+export { forEach, forEachObject, map, filter };
