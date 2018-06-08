@@ -38,4 +38,16 @@ const filter = (arr, fn) => {
   return result;
 };
 
-export { forEach, forEachObject, map, filter };
+// reduce
+const reduce = (arr, fn, initialValue = []) => {
+  let accumlator;
+  accumlator = initialValue;
+
+  for (const value of arr) {
+    accumlator = fn(accumlator, value);
+  }
+
+  return accumlator;
+};
+
+export { forEach, forEachObject, map, filter, reduce };

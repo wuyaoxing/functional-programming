@@ -1,4 +1,4 @@
-import { forEach, forEachObject, map, filter } from "./functional";
+import { forEach, forEachObject, map, filter, reduce } from "./functional";
 
 const arr = [1, 2, 3, 4, 5];
 const obj = { id: 1, name: "jon", age: 20 };
@@ -14,3 +14,15 @@ console.log("map:", arr, "to", arrMap);
 
 const arrFilter = filter(arr, item => item > 3);
 console.log("filter:", arr, "to", arrFilter);
+
+const arrReduce = reduce(arr, (acc, val) => {
+  acc.push(val * val)
+  return acc
+}, [78])
+
+const arrReduceToObject = reduce(arr, (acc, val) => {
+  acc[val] = val * val
+  return acc
+}, {})
+
+console.log('reduce:', arr, 'to', arrReduce, 'and', arrReduceToObject)
