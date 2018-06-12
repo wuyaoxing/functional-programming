@@ -50,4 +50,13 @@ const reduce = (arr, fn, initialValue = []) => {
   return accumlator;
 };
 
-export { forEach, forEachObject, map, filter, reduce };
+// once
+const once = fn => {
+  let done = false;
+
+  return function() {
+    return done ? undefined : ((done = true), fn.apply(this, arguments));
+  };
+};
+
+export { forEach, forEachObject, map, filter, reduce, once };

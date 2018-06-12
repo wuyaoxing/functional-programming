@@ -1,4 +1,4 @@
-import { forEach, forEachObject, map, filter, reduce } from "./functional";
+import { forEach, forEachObject, map, filter, reduce, once } from "./functional";
 
 const arr = [1, 2, 3, 4, 5];
 const obj = { id: 1, name: "jon", age: 20 };
@@ -26,3 +26,13 @@ const arrReduceToObject = reduce(arr, (acc, val) => {
 }, {})
 
 console.log('reduce:', arr, 'to', arrReduce, 'and', arrReduceToObject)
+
+const onceEvent = val => {
+  console.log('once:', val)
+}
+
+const onceFn = once(onceEvent)
+
+onceFn(1)
+onceFn(2)
+onceFn(3)
